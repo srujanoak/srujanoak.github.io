@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Srujan Oak | Finance, Math &amp; Public Policy</title>
+<meta name="description" content="Portfolio of Srujan Oak, Rutgers finance and public policy student with experience at the Library of Congress, Chugh LLP, and Project Destined.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F1E3A; --navy2:#1B2F55; --bg:#F6F7F9; --ink:#17233B; --muted:#55627A;
+    --line:#D8DDE5; --gold:#B58A3C; --white:#fff;
+    --serif:"Newsreader",Georgia,"Times New Roman",serif;
+    --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.7 var(--sans)}
+  a{color:var(--navy2)}
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 1.75rem}
+
+  nav{position:sticky;top:0;z-index:10;background:rgba(15,30,58,.97);backdrop-filter:blur(6px)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+  nav .brand{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--white);text-decoration:none;letter-spacing:.01em}
+  nav ul{display:flex;gap:2rem;list-style:none;margin:0;padding:0}
+  nav ul a{color:#C9D3E6;text-decoration:none;font-size:.95rem;font-weight:500;padding:.4rem 0;border-bottom:2px solid transparent}
+  nav ul a:hover{color:var(--white);border-bottom-color:var(--gold)}
+
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:var(--white);padding:6.5rem 0 5.5rem;animation:rise .8s ease-out both}
+  .hero .wrap{display:grid;grid-template-columns:1fr;gap:1.5rem}
+  .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(3rem,8vw,5.2rem);line-height:1.02;margin:0;letter-spacing:-.01em}
+  .hero .title{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:#D9B873;margin:0}
+  .hero .school{color:#B9C5DC;margin:0;font-size:1rem}
+  .hero .statement{font-size:1.2rem;line-height:1.65;color:#E3E9F4;max-width:40em;margin:.5rem 0 0;padding-left:1.25rem;border-left:3px solid var(--gold)}
+  .actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem}
+  .btn{display:inline-block;padding:.8rem 1.6rem;font-weight:600;font-size:.95rem;text-decoration:none;border:2px solid var(--gold)}
+  .btn.primary{background:var(--gold);color:var(--navy)}
+  .btn.primary:hover{background:#C99A48;border-color:#C99A48}
+  .btn.ghost{color:var(--white)}
+  .btn.ghost:hover{background:rgba(255,255,255,.08)}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+  section{padding:5rem 0}
+  .head{display:flex;align-items:baseline;gap:1.25rem;margin-bottom:2.75rem}
+  .head h2{font-family:var(--serif);font-weight:600;font-size:2.2rem;margin:0;color:var(--navy)}
+  .head::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.75rem}
+  .skill{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--gold);padding:1.75rem}
+  .skill h3{font-family:var(--serif);font-size:1.45rem;margin:0 0 1rem;color:var(--navy)}
+  .skill ul{list-style:none;margin:0;padding:0}
+  .skill li{padding:.55rem 0;border-top:1px solid var(--line);font-size:.98rem}
+  .skill li:first-child{border-top:0;padding-top:0}
+
+  #projects{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .project{display:grid;grid-template-columns:240px 1fr;gap:2.5rem;padding:2.25rem 0;border-top:1px solid var(--line)}
+  .project:first-of-type{border-top:0;padding-top:0}
+  .project h3{font-family:var(--serif);font-size:1.5rem;line-height:1.25;margin:0 0 .35rem;color:var(--navy)}
+  .project .meta{color:var(--muted);font-size:.92rem;margin:0}
+  .project p{margin:0 0 1rem;max-width:40em}
+  .tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0 0 1.1rem}
+  .tags li{font-size:.82rem;font-weight:500;padding:.2rem .7rem;background:#EDF0F5;color:var(--navy2);border-radius:99px}
+  .project .link{font-weight:600;text-decoration:none;border-bottom:2px solid var(--gold)}
+  .project .link:hover{color:var(--navy)}
+
+  #contact{background:var(--navy);color:var(--white);text-align:center;padding:4.5rem 0}
+  #contact h2{font-family:var(--serif);font-weight:600;font-size:2.2rem;margin:0 0 .75rem}
+  #contact p{color:#C9D3E6;margin:0 auto 1.75rem;max-width:32em}
+  .links{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+  footer{background:#0A1529;color:#8C9AB5;text-align:center;font-size:.88rem;padding:1.25rem}
+
+  @media (max-width:760px){
+    .project{grid-template-columns:1fr;gap:.75rem}
+    nav ul{gap:1.1rem}
+    .hero{padding:4rem 0 3.5rem}
+    section{padding:3.5rem 0}
+  }
+  @media (prefers-reduced-motion:reduce){.hero{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Srujan Oak</a>
+    <ul>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1>Srujan Oak</h1>
+    <p class="title">Finance &middot; Math &middot; Public Policy</p>
+    <p class="school">Rutgers University&ndash;New Brunswick &middot; B.S. Finance &amp; Public Policy, Minor in Applied Math &middot; Class of 2029</p>
+    <p class="statement">I am a Rutgers finance and public policy student with an applied math minor who combines legal research, historical document analysis, and real estate private equity underwriting.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">View my projects</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="head"><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill">
+        <h3>Finance</h3>
+        <ul>
+          <li>Multifamily real estate underwriting</li>
+          <li>Private equity deal analysis</li>
+          <li>Financial and managerial accounting</li>
+          <li>Excel modeling</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Math</h3>
+        <ul>
+          <li>Calculus I, II and III</li>
+          <li>Linear algebra</li>
+          <li>Statistics for business</li>
+          <li>Algebra and geometry tutoring</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Policy</h3>
+        <ul>
+          <li>Visa and immigration regulation research</li>
+          <li>Legal case file analysis</li>
+          <li>Historical document research</li>
+          <li>Public speaking and client communication</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Technical</h3>
+        <ul>
+          <li>Python</li>
+          <li>C++ (intermediate)</li>
+          <li>Project management</li>
+          <li>English (fluent), Marathi (conversational)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="head"><h2>Projects</h2></div>
+
+    <article class="project">
+      <div>
+        <h3>U.S. Library of Congress</h3>
+        <p class="meta">Business Record Analyst<br>May 2026 &ndash; July 2026 &middot; Remote / Washington, D.C.</p>
+      </div>
+      <div>
+        <p>Researched American documents from 1900 to 1932 and assessed whether they could be digitized. I led weekly meetings on the digitization process and its effects.</p>
+        <ul class="tags"><li>Archival research</li><li>Digitization</li><li>Analysis</li></ul>
+        <a class="link" href="https://www.loc.gov" target="_blank" rel="noopener">Visit loc.gov</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <div>
+        <h3>Chugh, LLP</h3>
+        <p class="meta">Legal Intern<br>June 2024 &ndash; June 2026 (summers) &middot; Metuchen, NJ</p>
+      </div>
+      <div>
+        <p>Analyzed and organized complex immigration case files, including F-1 and O-1 visas, and researched changing visa regulations for clients from India and Europe. I also produced an explainer video that clarifies visa processes for clients.</p>
+        <ul class="tags"><li>Legal research</li><li>Immigration policy</li><li>Case analysis</li></ul>
+        <a class="link" href="https://www.linkedin.com/in/srujan-oak-855125208" target="_blank" rel="noopener">See my LinkedIn</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <div>
+        <h3>Project Destined</h3>
+        <p class="meta">PE Analyst Intern, Real Estate Group<br>February 2026 &ndash; March 2026 &middot; Edison, NJ</p>
+      </div>
+      <div>
+        <p>Completed a 5-week real estate private equity program and underwrote three multifamily deals, in teams and individually. The program ended with a real-world investment competition backed by $1,000 in funds, and I earned the Project Destined Real Estate Certification.</p>
+        <ul class="tags"><li>Private equity</li><li>Multifamily</li><li>Underwriting</li></ul>
+        <a class="link" href="https://www.projectdestined.com" target="_blank" rel="noopener">Visit Project Destined</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Let's connect</h2>
+    <p>I am interested in opportunities in corporate law, risk management, finance, and real estate.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:sao125@scarletmail.rutgers.edu">Email me</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/srujan-oak-855125208" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; 2026 Srujan Oak</footer>
+</body>
+</html>
